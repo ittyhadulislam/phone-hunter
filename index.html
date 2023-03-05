@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+    <script src="https://cdn.tailwindcss.com/3.2.4"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                fontFamily: {
+                    sans: ["Roboto", "sans-serif"],
+                    body: ["Roboto", "sans-serif"],
+                    mono: ["ui-monospace", "monospace"],
+                },
+            },
+        };
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <H1 class="text-5xl text-center font-bold py-5">Welcome to the phone Shop</H1>
+    <section class="mb-5">
+        <div>
+            <div class="bg-slate-500 p-5 flex justify-center">
+                <div class="w-full flex gap-2 relative mb-3 xl:w-96">
+                    <input type="email" id="input-field"
+                        class="peer m-0 block h-[58px] w-full rounded border border-solid border-neutral-300 bg-white bg-clip-padding py-4 px-3 text-base font-normal leading-tight text-neutral-700 ease-in-out placeholder:text-transparent focus:border-primary focus:bg-white focus:pt-[1.625rem] focus:pb-[0.625rem] focus:text-neutral-700 focus:shadow-te-primary focus:outline-none dark:bg-neutral-800 dark:text-neutral-200 [&:not(:placeholder-shown)]:pt-[1.625rem] [&:not(:placeholder-shown)]:pb-[0.625rem]"
+                        placeholder="name@example.com" />
+                    <label for="floatingInput"
+                        class="pointer-events-none absolute top-0 left-0 origin-[0_0] border border-solid border-transparent py-4 px-3 text-neutral-700 transition-[opacity,_transform] duration-100 ease-in-out peer-focus:translate-x-[0.15rem] peer-focus:-translate-y-2 peer-focus:scale-[0.85] peer-focus:opacity-[0.65] peer-[:not(:placeholder-shown)]:translate-x-[0.15rem] peer-[:not(:placeholder-shown)]:-translate-y-2 peer-[:not(:placeholder-shown)]:scale-[0.85] peer-[:not(:placeholder-shown)]:opacity-[0.65] motion-reduce:transition-none dark:text-neutral-200">Email
+                        address</label>
+                    <button type="button" data-te-ripple-init data-te-ripple-color="light" id="search-button"
+                        class="inline-block rounded bg-blue-600 px-10 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]">
+                        Search
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container bg-slate-600 m-auto flex flex-wrap justify-center items-center p-8">
+        <!-- cards -->
+        <div id="cards" class="grid grid-cols-3 gap-8">
+            <!-- <div class="block max-w-sm rounded-lg bg-white shadow-lg dark:bg-neutral-700 border">
+                <a href="#!">
+                    <img class="rounded-t-lg" src="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg" alt="" />
+                </a>
+                <div class="p-6">
+                    <h5 class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
+                        Card title
+                    </h5>
+                    <p class="mb-4 text-base text-neutral-600 dark:text-neutral-200">
+                        Some quick example text to build on the card title and make up the
+                        bulk of the card's content.
+                    </p>
+                    <button type="button"
+                        class="inline-block rounded bg-blue-600 px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+                        data-te-ripple-init data-te-ripple-color="light">
+                        Button
+                    </button>
+                </div>
+            </div> -->
+        </div>
+
+        <!-- alert box -->
+        <div id="alert-message"
+            class="mb-3 inline-flex w-full items-center rounded-lg bg-warning-100 py-5 px-6 text-base text-warning-800 hidden"
+            role="alert">
+            <span class="mr-2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5">
+                    <path fill-rule="evenodd"
+                        d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003zM12 8.25a.75.75 0 01.75.75v3.75a.75.75 0 01-1.5 0V9a.75.75 0 01.75-.75zm0 8.25a.75.75 0 100-1.5.75.75 0 000 1.5z"
+                        clip-rule="evenodd" />
+                </svg>
+            </span>
+            Your Product has not Found
+        </div>
+
+        <!-- spinner -->
+        <div id="spinner" class="flex items-center justify-center hidden">
+            <div class="text-blue-600 inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
+                role="status">
+                <span
+                    class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
+                    Loading...
+                </span>
+            </div>
+        </div>
+    </section>
+    <section class="container bg-slate-600 m-auto py-5">
+        <div id="show-all-button-div" class="flex justify-center space-x-2 hidden">
+            <button id="show-button" type="button" data-te-ripple-init data-te-ripple-color="light"
+                class="inline-block rounded bg-blue-600 px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]">
+                Show All
+            </button>
+        </div>
+    </section>
+
+    <section>
+        <!-- modal button -->
+        <!-- <button type="button"
+            class="inline-block rounded bg-blue-600 px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+            data-te-toggle="modal" data-te-target="#exampleModalCenteredScrollable" data-te-ripple-init
+            data-te-ripple-color="light">
+            Vertically centered scrollable modal
+        </button> -->
+        <!-- modal boby -->
+        <div data-te-modal-init
+            class="fixed top-0 left-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+            id="exampleModalCenteredScrollable" tabindex="-1" aria-labelledby="exampleModalCenteredScrollable"
+            aria-modal="true" role="dialog">
+            <div data-te-modal-dialog-ref
+                class="pointer-events-none relative flex min-h-[calc(100%-1rem)] w-auto translate-y-[-50px] items-center opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:min-h-[calc(100%-3.5rem)] min-[576px]:max-w-[500px]">
+                <div
+                    class="pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600">
+                    <div
+                        class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
+                        <h5 id="modal-title"
+                            class="text-xl font-medium leading-normal text-neutral-800 dark:text-neutral-200"
+                            id="exampleModalCenteredScrollableLabel">
+                            Modal title
+                        </h5>
+                        <button type="button"
+                            class="box-content rounded-none border-none hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none"
+                            data-te-modal-dismiss aria-label="Close">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="h-6 w-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="relative p-4 flex items-center gap-5">
+                        <div class=" w-[50%] h-full">
+                            <img id="image-thumb" src="./oppo-find-x5-lite.jpg" alt="" srcset="">
+                        </div>
+                        <div class="border-l-2 pl-5">
+                            <h3 class="text-1xl font-bold">Brand : <span id="brand-name">brand</span></h3>
+                            <h3 class="text-1xl font-semibold">Release Date :
+                                <span id="release-date">
+                                    releaseDate
+                                </span>
+                            </h3>
+                            <br>
+                            <h2 class="text-2xl">Others</h2>
+                            <hr>
+                            <div class="pt-4">
+                                <div class="pt-4">
+                                    <h3 class="pb-2">WLAN : <span id="wlan">others.WLAN</span></h3>
+                                    <h3 class="pb-2">Bluetooth : <span id="bluetooth">others.Bluetooth</span></h3>
+                                    <h3 class="pb-2">GPS : <span id="gps">others.GPS</span></h3>
+                                    <h3 class="pb-2">NFC : <span id="nfc">others.NFC</span></h3>
+                                    <h3 class="pb-2">Radio : <span id="radio">others.Radio</span></h3>
+                                    <h3 class="pb-2">USB : <span id="usb">others.USB</span></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative p-4">
+                        <h2 class="text-2xl">Main Features</h2>
+                        <hr>
+                        <div class="pt-4">
+                            <h3 class="pb-2">Storage : <span id="storage">mainFeatures.storage</span></h3>
+                            <h3 class="pb-2">Memory : <span id="memory">mainFeatures.memory</span></h3>
+                            <h3 class="pb-2">display Size :
+                                <span id="display-size">
+                                    mainFeatures.displaySize
+                                </span>
+                            </h3>
+                            <h3 class="pb-2">Chip Set : <span id="chipset">mainFeatures.chipSet</span></h3>
+                            <h3 class="pb-2">Sensors : <span id="sensors">mainFeatures.sensors</span></h3>
+                        </div>
+                    </div>
+                    <br>
+                    <hr>
+                    <p id="slug" class="p-4">slug</p>
+                    <div
+                        class="flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
+                        <button type="button"
+                            class="inline-block rounded bg-gray-600 px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-gray-700 focus:bg-primary-accent-100 focus:outline-none focus:ring-0 active:bg-primary-accent-200"
+                            data-te-modal-dismiss data-te-ripple-init data-te-ripple-color="light">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
